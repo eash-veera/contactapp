@@ -1,0 +1,30 @@
+{
+  "name": "contactapp",
+  "version": "1.0.0",
+  "description": "Simple contact app created using the MEAN stack, for gapstars technical evaluation.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eash-veera/contactapp.git"
+  },
+  "keywords": [
+    "MEAN",
+    "contact",
+    "app"
+  ],
+  "author": "Eshwaran Veerabahu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eash-veera/contactapp/issues"
+  },
+  "homepage": "https://github.com/eash-veera/contactapp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.7"
+  }
+}
