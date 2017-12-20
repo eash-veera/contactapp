@@ -14,6 +14,7 @@ export class ContactsComponent implements OnInit {
   first_name: string;
   last_name: string;
   phone: string;
+  age: number;
 
   constructor(private contactService: ContactService) { }
 
@@ -21,7 +22,8 @@ export class ContactsComponent implements OnInit {
     const newContact = {
       first_name: this.first_name,
       last_name: this.last_name,
-      phone: this.phone
+      phone: this.phone,
+      age: this.age
     };
 
     this.contactService.addContact(newContact)
