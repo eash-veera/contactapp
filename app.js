@@ -1,13 +1,28 @@
 //import dependant modules
-let express = require('express');
-let mongoose = require('mongoose');
-let bodyparser = require('body-parser');
-let cors = require('cors');
-let path = require('path');
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyparser = require('body-parser');
+const cors = require('cors');
+const path = require('path');
 
-let app = express();
+const app = express();
 
 const route = require('./routes/route');
+
+//connect to mongodb
+mongoose.connect('mongodb://localhost:27017/contactlist');
+
+//on connection
+mongoose.connection.on('connected', () => {
+    console.log('Connected to database mongodb @27017');
+});
+
+//on connection error
+mongoose.connection.on('error', (err) => {
+    if(err){
+        console.log('error in db connection:'+err);
+    }
+});
 
 //define port number
 const port = 3000;
